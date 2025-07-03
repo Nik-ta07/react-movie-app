@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children, darkMode, setDarkMode }) => {
         minHeight: "100vh",
         bgcolor: "background.default",
         display: "flex",
-        flexDirection: "column"
+        flexDirection: "column",
       }}
     >
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
@@ -31,6 +31,17 @@ const Layout: React.FC<LayoutProps> = ({ children, darkMode, setDarkMode }) => {
         }}
       >
         {children}
+      </Box>
+      <Box
+        component="footer"
+        sx={{
+          textAlign: "center",
+          py: 2,
+          color: "text.secondary",
+          fontSize: 14,
+        }}
+      >
+        © {new Date().getFullYear()} Nikita
       </Box>
     </Box>
   );
